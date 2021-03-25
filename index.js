@@ -6,12 +6,12 @@ exports.executeMeetsTest = () => {
     // Instantiate a Mocha instance.
     var mocha = new Mocha();
 
-    var testDir = __dirname + '/test/'
+    var testDir = __dirname + path.sep + 'test'  + path.sep ;
 
     // Add each .js file to the mocha instance
     fs.readdirSync(testDir).filter(function(file) {
         // Only keep the .js files
-        return file.substr(-3) === '.js';
+        return path.extname(file)=== '.js';
 
     }).forEach(function(file) {
         mocha.addFile(

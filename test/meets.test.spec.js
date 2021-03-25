@@ -30,33 +30,33 @@ describe('meets expectations', function () {
   describe('Validate instructions 01', function () {
     describe('.gitignore', function () {
       it('file should exist', async function () {
-        const actual = await testItemExists(global.appRoot + '\\.gitignore');
+        const actual = await testItemExists(global.appRoot + '.gitignore');
         expect(actual).to.be.true;
       });
       it('file should contain node_modules', async function () {
-        const actual = await testFileContainsString(global.appRoot + '\\.gitignore', 'node_modules');
+        const actual = await testFileContainsString(global.appRoot + '.gitignore', 'node_modules');
         expect(actual).to.be.true;
       });
     });
 
     describe('README.md', function () {
       it('file should exist', async function () {
-        const actual = await testItemExists(global.appRoot + '\\README.md');
+        const actual = await testItemExists(global.appRoot + 'README.md');
         expect(actual).to.be.true;
       });
     });
     describe('Express Application Generator', function () {
       it('should have an app.js file', async function () {
-        const actual = await testItemExists(global.appRoot + '\\app.js');
+        const actual = await testItemExists(global.appRoot + 'app.js');
         expect(actual).to.be.true;
       });
       describe('should have a valid bin folder', function () {
         it('bin folder should exist', async function () {
-          const actual = await testItemExists(global.appRoot + '\\bin');
+          const actual = await testItemExists(global.appRoot + 'bin');
           expect(actual).to.be.true;
         });
         it('bin folder should contain www file', async function () {
-          const actual = await testItemExists(global.appRoot + '\\bin\\www');
+          const actual = await testItemExists(global.appRoot + 'bin'+ path.sep + 'www');
           expect(actual).to.be.true;
         });
       });
@@ -70,7 +70,7 @@ describe('meets expectations', function () {
   context('Validate instructions 03', function () {
     describe('config/config.json', function(){
       it ('dialect should be set to sqlite, storage to library.db', async function () {
-        const actual = await testFileContainsString(global.appRoot + '\\config\\config.json', 'sqlite');
+        const actual = await testFileContainsString(global.appRoot + 'config'+ path.sep + 'config.json', 'sqlite');
         expect(actual).to.be.true;
     });
   });
@@ -262,37 +262,37 @@ describe('meets expectations', function () {
   context('Validate instructions 09', function () {
     describe('layout.pug', function () {
       it('file should exist', async function () {
-        const actual = await testItemExists(global.appRoot + '\\views\\layout.pug');
+        const actual = await testItemExists(global.appRoot + 'views'+ path.sep + 'layout.pug');
         expect(actual).to.be.true;
       });
     });
     describe('index.pug', function () {
       it('file should exist', async function () {
-        const actual = await testItemExists(global.appRoot + '\\views\\index.pug');
+        const actual = await testItemExists(global.appRoot + 'views'+ path.sep + 'index.pug');
         expect(actual).to.be.true;
       });
     });
     describe('new-book.pug', function () {
       it('file should exist', async function () {
-        const actual = await testItemExists(global.appRoot + '\\views\\new-book.pug');
+        const actual = await testItemExists(global.appRoot + 'views'+ path.sep + 'new-book.pug');
         expect(actual).to.be.true;
       });
     });
     describe('update-book.pug', function () {
       it('file should exist', async function () {
-        const actual = await testItemExists(global.appRoot + '\\views\\update-book.pug');
+        const actual = await testItemExists(global.appRoot + 'views'+ path.sep + 'update-book.pug');
         expect(actual).to.be.true;
       });
     });
     describe('error.pug', function () {
       it('file should exist', async function () {
-        const actual = await testItemExists(global.appRoot + '\\views\\error.pug');
+        const actual = await testItemExists(global.appRoot + 'views'+ path.sep + 'error.pug');
         expect(actual).to.be.true;
       });
     });
     describe('page-not-found.pug', function () {
       it('file should exist', async function () {
-        const actual = await testItemExists(global.appRoot + '\\views\\page-not-found.pug');
+        const actual = await testItemExists(global.appRoot + 'views'+ path.sep + 'page-not-found.pug');
         expect(actual).to.be.true;
       });
     })
@@ -301,7 +301,7 @@ describe('meets expectations', function () {
   context('Validate instructions 10', function () {
     describe('models/book', function(){
       it ('tests that validator exists', async function () {
-        const actual = await testFileContainsString(global.appRoot + '\\models\\book.js', 'Please provide a value for "Title"');
+        const actual = await testFileContainsString(global.appRoot + 'models'+ path.sep + 'book.js', 'Please provide a value for "Title"');
         expect(actual).to.be.true;
     });
   });
