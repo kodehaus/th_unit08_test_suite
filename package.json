@@ -1,0 +1,41 @@
+{
+  "name": "th_unit08_test_suite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/projectopportunity/th_unit08_test_suite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/projectopportunity/th_unit08_test_suite/issues"
+  },
+  "homepage": "https://github.com/projectopportunity/th_unit08_test_suite#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "fetch": "^1.1.0",
+    "mocha": "^8.3.2"
+  },
+  "semistandard": {
+    "env": [
+      "mocha",
+      "chai"
+    ]
+  },
+  "standard": {
+    "env": [
+      "mocha",
+      "chai"
+    ]
+  },
+  "dependencies": {}
+}
